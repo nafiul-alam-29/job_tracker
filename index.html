@@ -53,9 +53,9 @@
         </div>
 
         <div class=" mx-auto mb-6">
-            <button onclick="toggleStyle('all-filter-btn')"  class="bg-blue-400 text-white px-5 py-2 mr-3 rounded-md" id="all-filter-btn">All</button>
-            <button onclick="toggleStyle('interview-filter-btn')"  class="bg-gray-300 px-5 py-2 mr-3 rounded-md" id="interview-filter-btn">Interview</button>
-            <button onclick="toggleStyle('reject-filter-btn')"  class="bg-gray-300 px-5 py-2 mr-3 rounded-md" id="reject-filter-btn">Rejected</button>
+            <button id="tab-all" onclick="toggleTab('all')"  class="bg-blue-400 text-white px-5 py-2 mr-3 rounded-md" >All</button>
+            <button id="tab-interview" onclick="toggleTab('interview')"  class="bg-gray-300 px-5 py-2 mr-3 rounded-md" >Interview</button>
+            <button id="tab-rejected" onclick="toggleTab('rejected')"  class="bg-gray-300 px-5 py-2 mr-3 rounded-md" >Rejected</button>
         </div>
 
         <!-- Filtered card -->
@@ -364,7 +364,7 @@
 
 
     </main>
-   
+   <script src="script/script.js"></script>
     
 </body>
 </html>
