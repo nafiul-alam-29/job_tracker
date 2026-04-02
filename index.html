@@ -27,17 +27,17 @@
         <div class="grid grid-cols-3 gap-8">
             <div class="bg-white p-4 rounded-md shadow-slate-300 shadow-md">
                 <p>Total</p>
-                <p id="total" class="text-2xl">0</p>
+                <p id="stat-total" class="text-2xl">0</p>
             </div>
 
             <div class="bg-white p-4 rounded-md shadow-slate-300 shadow-md">
                 <p>Interview </p>
-                <p id="interviewCount" class="text-green-400 text-2xl">0</p>
+                <p id="stat-interview" class="text-green-400 text-2xl">0</p>
             </div>
 
             <div class="bg-white p-4 rounded-md shadow-slate-300 shadow-md">
                 <p>Rejected</p>
-                <p id="rejectCount" class="text-red-400 text-2xl">0</p>
+                <p id="stat-reject" class="text-red-400 text-2xl">0</p>
             </div>
         </div>
     </header>
@@ -47,9 +47,9 @@
     <!-- header part end -->
 
     <main class="w-[80%] mx-auto space-y-6">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center ">
             <h2 class="text-2xl"> Avaliable Jobs</h2>
-            <p class="text-xl"> <span> 0 </span> Jobs</p>
+            <p class="text-xl"> <span id="total-jobs"> 0 </span> Jobs</p>
         </div>
 
         <div class=" mx-auto mb-6">
@@ -58,13 +58,12 @@
             <button id="tab-rejected" onclick="toggleTab('rejected')"  class="bg-gray-300 px-5 py-2 mr-3 rounded-md" >Rejected</button>
         </div>
 
-        <!-- Filtered card -->
 
-        <section id="filtered-section" class="hidden">
+        <!-- All Cards -->
 
-        </section>
+        <div id="avaliable-jobs-container">
 
-        <section id="allCards" class="space-y-6">
+            <section  id="all-container" class="hidden space-y-6">
 
             <!-- card 1 -->
             <div class="card flex justify-between border border-slate-200 p-8 rounded-md bg-white">
@@ -91,14 +90,14 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
@@ -126,14 +125,14 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md ">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md ">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
@@ -163,14 +162,14 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
@@ -200,14 +199,14 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
@@ -237,8 +236,8 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
@@ -273,14 +272,14 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
@@ -310,14 +309,14 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
@@ -347,20 +346,41 @@
                      
 
                      <div class="flex gap-5">
-                        <button class=" bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
-                        <button class=" bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
+                        <button class="interview bg-white border border-green-400 text-green-500 px-4 py-2 rounded-md">INTERVIEW</button>
+                        <button class="reject bg-white border border-red-400 text-red-400 px-4 py-2 rounded-md">REJECTED</button>
                      </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
+                    <button class="delete bg-red-200 text-red-600 px-4 py-2 rounded-2xl"> <i class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
 
-            <!-- card -->
+            <!-- all cards here -->
+             <!-- Interview Section -->
+            
+        </div>
 
-        </section>
+            <div id="interview-reject-jobs-container">
+                <!-- interview section -->
+                <section id="interview-container" class="hidden">
+                 <h1 class="text-xl"> Interview </h1>
+                </section>
+
+                 <!-- Rejected Section -->
+                <section id="reject-container" class="hidden">
+                    <h1 class="text-xl"> Rejected </h1>
+                </section>
+            </div>
+
+            
+            <!--  No Jobs Section -->
+              <div class="hidden flex-col items-center justify-center py-20 gap-4 text-center">
+                <div class="text-7xl opacity-20"><i class="fa-regular fa-file"></i></div>
+                <p class="text-lg font-bold text-navy">No Jobs Found</p>
+                <p class="text-sm text text-slate-400"> Check back later for new opportunities. </p>
+              </div>
 
 
     </main>
